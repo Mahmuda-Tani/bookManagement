@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Management System</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/bootstrap.4.5.3/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/custom/customCss.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body class="index-body">
+
+<div class = "container">
+
+    <h1 class = "text-center form-heading"> Add Author </h1>
+    <div class = "row">
+        <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+
+            <br>
+
+
+            <form action="/saveAuthor" th:object = "${author}" method="POST">
+
+
+                <input
+                        type = "text"
+                        th:field = "*{id}"
+                        class = "form-control"
+                       hidden
+                />
+
+
+                <div class ="form-group">
+                    <label> Author Name </label>
+                    <input
+                            type = "text"
+                            th:field = "*{name}"
+                            class = "form-control"
+                            placeholder="Enter Author Name"
+                    />
+                </div>
+                <div class = "box-footer row">
+
+                    <div class="col">
+                        <input type="submit" class="btn btn-primary " value="Submit">
+                    </div>
+
+                    <div class="col text-right">
+                        <a class="btn btn-outline-primary w-20 " th:href="@{/authorList}" id="cancel-submit" >cancel</a>
+                    </div>
+
+                </div>
+
+
+
+            </form>
+
+
+
+            <div class = "card-body " >
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+

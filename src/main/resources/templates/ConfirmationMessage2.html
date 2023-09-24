@@ -1,0 +1,49 @@
+
+
+
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Book Management System</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/bootstrap.4.5.3/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/custom/customCss.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+
+<body class="index-body">
+<div class="container my-2 text-center">
+
+
+    <div class="card con-card-body" >
+        <div>
+            <table class="text-center table " style="margin-top: 10px">
+                <tr><td>Author Name : </td><td th:text="${author.name}"></td></tr>
+
+            </table>
+
+        </div>
+
+
+        <div class="card-body">
+
+            <p class="card-text">Added Successfully</p>
+            <a th:href="@{/authorList}" class="btn btn-primary btn-sm mb-3"> <i class="fa fa-ok"></i> ok </a>
+
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+</body>
+
+
+
+</html>

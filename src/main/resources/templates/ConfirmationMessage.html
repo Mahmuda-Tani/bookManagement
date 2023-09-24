@@ -1,0 +1,53 @@
+
+
+
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Book Management System</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/bootstrap.4.5.3/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/custom/customCss.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+
+<body class="index-body">
+<div class="container my-2 text-center">
+
+
+    <div class="card con-card-body" >
+        <div>
+            <table class="text-center table " style="margin-top: 10px">
+                <tr><td>Book Name : </td><td th:text="${book.bookName}"></td></tr>
+                <tr><td>Author Name: </td><td th:text="${book.authorName}"></td></tr>
+                <tr><td>Price: </td>  <td th:text="${book.price}"></td></tr>
+                <tr><td>Publication Year: </td><td th:text="${book.publicationYear}"></td></tr>
+            </table>
+
+        </div>
+
+        <div><p th:text="${message}"></p></div>
+
+
+        <div class="card-body">
+
+<!--            <p class="card-text">th:text="${message}"</p>-->
+            <a th:href="@{/booklist}" class="btn btn-primary btn-sm mb-3"> <i class="fa fa-ok"></i> ok </a>
+
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+</body>
+
+
+
+</html>

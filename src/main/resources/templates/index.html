@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Book Management System</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/bootstrap.4.5.3/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/custom/customCss.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/script.js"></script>
+
+</head>
+
+
+<body class="index-body">
+
+
+<div class="container my-2">
+
+
+
+    <div class="container">
+        <div class="row">
+            <h1 class="index-heading">Welcome to Book Management System</h1>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col ">
+
+                <select id="authorSelect" onchange="fetchBooks()" >
+
+                    <option th:each="author : ${authors}" th:value="${author.name}" th:text="${author.name}">Writer Name</option>
+                </select>
+
+
+
+
+            </div>
+
+
+            <div class="col">
+                 <a th:href="@{/authorList}" class="btn btn-primary btn-sm mb-3"> <i class="fa fa-user"></i> Authors </a>
+            </div>
+
+
+            <div class="col">
+                <a th:href="@{/addBook}" class="btn btn-primary btn-sm mb-3"> <i class="fa fa-book"></i> Add Book </a>
+
+            </div>
+
+
+
+
+            <div class="col">
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input type="search" id="searchWith" class="form-control" placeholder="search"/>
+
+                    </div>
+                    <button type="button" class="btn btn-primary" style="height: 38px"  onclick="searchBooks()">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+        <br><br>
+
+        <div><h3 class="book-heading">Book List</h3></div>
+
+
+        <div class="row">
+            <div class="col-12">
+                <table border="1" class = "table table-striped table-responsive-md bg-light"  >
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Book Name</th>
+                        <th>Author Name</th>
+                        <th>Price</th>
+                        <th>Publication Year</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody id="bookTableBody">
+                    <tr th:each="book : ${books}">
+                        <td th:text="${book.id}"></td>
+                        <td th:text="${book.bookName}"></td>
+                        <td th:text="${book.authorName}"></td>
+                        <td th:text="${book.price}"></td>
+                        <td th:text="${book.publicationYear}"></td>
+                        <td> <a th:href="@{/updateBook/{id}(id = ${book.id})}" class="btn btn-primary btn-sm mb-3"> <i class="fa fa-update"></i>  update </a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+
+
+
+</html>

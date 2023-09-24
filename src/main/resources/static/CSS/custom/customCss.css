@@ -1,0 +1,47 @@
+
+
+.index-body{
+
+    background-image: url("/images/back1.jpg"),linear-gradient(black,white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+}
+.index-heading{
+    color: green;
+    padding: 50px;
+    margin-left: 120px;
+    margin-bottom: 50px;
+
+}
+
+.author-heading{
+    color: green;
+    margin-bottom: -30px;
+
+}
+.book-heading{
+    color: #ba8b00;
+}
+
+.form-heading{
+    color: #ba8b00;
+    padding: 50px;
+}
+
+.con-card-body{
+    width: 300px;
+    height: 350px ;
+    margin-top: 50px;
+     margin-left: 370px;
+    border: 2px solid green;
+
+}
+
+.author-select{
+
+    background-color: blue ;
+
+}
